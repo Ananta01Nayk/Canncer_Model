@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Information Form</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/formStyle.css')}}">
+</head>
+<body>
+
+    <!-- Form Container -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 col-sm-12">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h2 class="card-title text-center">Health Information Form</h2>
+                        
+                        <form action="{{url_for('predict')}}" method="post">
+                            <div class="row">
+                                <!-- Gender -->
+                                <div class="form-group col-md-6 mb-3">
+                                    <label for="gender" class="form-label">Gender</label>
+                                    <select id="gender" name="GENDER" class="form-select" required>
+                                        <option value="">Select</option>
+                                        <option value="M">Male</option>
+                                        <option value="F">Female</option>
+                                        <option value="0">Other</option>
+                                    </select>
+                                </div>
+
+                                <!-- Age -->
+                                <div class="form-group col-md-6 mb-3">
+                                    <label for="age" class="form-label">Age</label>
+                                    <input type="number" id="age" name="AGE" class="form-control" min="1" max="120" required>
+                                </div>
+                            </div>
+
+                            <!-- Smoking -->
+                            <div class="form-group mb-3">
+                                <label for="smoking" class="form-label">Smoking</label>
+                                <select id="smoking" name="SMOKING" class="form-select" required>
+                                    <option value="">Select</option>
+                                    <option value="0">Non-smoker</option>
+                                    <option value="1">Light smoker</option>
+                                    <option value="2">Heavy smoker</option>
+                                </select>
+                            </div>
+
+                            <!-- Yellow Fingers -->
+                            <div class="form-group mb-3">
+                                <label for="yellow_fingers" class="form-label">Yellow Fingers</label>
+                                <select id="yellow_fingers" name="YELLOW_FINGERS" class="form-select" required>
+                                    <option value="">Select</option>
+                                    <option value="0">No</option>
+                                    <option value="1">Yes</option>
+                                </select>
+                            </div>
+
+                            <!-- Anxiety -->
+                            <div class="form-group mb-3">
+                                <label for="anxiety" class="form-label">Anxiety</label>
+                                <select id="anxiety" name="ANXIETY" class="form-select" required>
+                                    <option value="">Select</option>
+                                    <option value="0">No</option>
+                                    <option value="1">Yes</option>
+                                </select>
+                            </div>
+
+                            <!-- Peer Pressure -->
+                            <div class="form-group mb-3">
+                                <label for="peer_pressure" class="form-label">Peer Pressure</label>
+                                <select id="peer_pressure" name="PEER_PRESSURE" class="form-select" required>
+                                    <option value="">Select</option>
+                                    <option value="0">No</option>
+                                    <option value="1">Yes</option>
+                                </select>
+                            </div>
+
+                            <!-- Chronic Disease -->
+                            <div class="form-group mb-3">
+                                <label for="chronic_disease" class="form-label">Chronic Disease</label>
+                                <select id="chronic_disease" name="CHRONIC_DISEASE" class="form-select" required>
+                                    <option value="">Select</option>
+                                    <option value="0">No</option>
+                                    <option value="1">Yes</option>
+                                </select>
+                            </div>
+
+                            <!-- Fatigue -->
+                            <div class="form-group mb-3">
+                                <label for="fatigue" class="form-label">Fatigue</label>
+                                <select id="fatigue" name="FATIGUE" class="form-select" required>
+                                    <option value="">Select</option>
+                                    <option value="0">No</option>
+                                    <option value="1">Yes</option>
+                                </select>
+                            </div>
+
+                            <!-- Allergy -->
+                            <div class="form-group mb-3">
+                                <label for="allergy" class="form-label">Allergy</label>
+                                <select id="allergy" name="ALLERGY" class="form-select" required>
+                                    <option value="">Select</option>
+                                    <option value="0">No</option>
+                                    <option value="1">Yes</option>
+                                </select>
+                            </div>
+
+                            <!-- Wheezing -->
+                            <div class="form-group mb-3">
+                                <label for="wheezing" class="form-label">Wheezing</label>
+                                <select id="wheezing" name="WHEEZING" class="form-select" required>
+                                    <option value="">Select</option>
+                                    <option value="0">No</option>
+                                    <option value="1">Yes</option>
+                                </select>
+                            </div>
+
+                            <!-- Alcohol Consuming -->
+                            <div class="form-group mb-3">
+                                <label for="alcohol" class="form-label">Alcohol Consuming</label>
+                                <select id="alcohol" name="ALCOHOL_CONSUMING" class="form-select" required>
+                                    <option value="">Select</option>
+                                    <option value="0">No</option>
+                                    <option value="1">Yes</option>
+                                </select>
+                            </div>
+
+                            <!-- Coughing -->
+                            <div class="form-group mb-3">
+                                <label for="coughing" class="form-label">Coughing</label>
+                                <select id="coughing" name="COUGHING" class="form-select" required>
+                                    <option value="">Select</option>
+                                    <option value="0">No</option>
+                                    <option value="1">Yes</option>
+                                </select>
+                            </div>
+
+                            <!-- Shortness of Breath -->
+                            <div class="form-group mb-3">
+                                <label for="shortness_of_breath" class="form-label">Shortness of Breath</label>
+                                <select id="shortness_of_breath" name="SHORTNESS_OF_BREATH" class="form-select" required>
+                                    <option value="">Select</option>
+                                    <option value="0">No</option>
+                                    <option value="1">Yes</option>
+                                </select>
+                            </div>
+
+                            <!-- Swallowing Difficulty -->
+                            <div class="form-group mb-3">
+                                <label for="swallowing_difficulty" class="form-label">Swallowing Difficulty</label>
+                                <select id="swallowing_difficulty" name="SWALLOWING_DIFFICULTY" class="form-select" required>
+                                    <option value="">Select</option>
+                                    <option value="0">No</option>
+                                    <option value="1">Yes</option>
+                                </select>
+                            </div>
+
+                            <!-- Chest Pain -->
+                            <div class="form-group mb-3">
+                                <label for="chest_pain" class="form-label">Chest Pain</label>
+                                <select id="chest_pain" name="CHEST_PAIN" class="form-select" required>
+                                    <option value="">Select</option>
+                                    <option value="0">No</option>
+                                    <option value="1">Yes</option>
+                                </select>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn btn-primary w-100">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
