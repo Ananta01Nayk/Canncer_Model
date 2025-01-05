@@ -1,5 +1,5 @@
 
-# **Detect Cancer Early**
+# **Cancer Model**
 ### Project Overview
 
 This project is a machine learning model designed to predict whether a given input  or benign based on features extracted from medical data. The model uses various classification algorithms to make accurate predictions, which can help medical professionals in early diagnosis and decision-making processes.
